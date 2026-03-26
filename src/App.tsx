@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [cont2, atribua2] = useState(57)
+
+
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
