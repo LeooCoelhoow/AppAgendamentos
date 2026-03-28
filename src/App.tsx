@@ -1,6 +1,7 @@
+import React from 'react';
 import { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import BotaoGeraInverte from './components/exercicio1botao';
 
 export default function App() {
   const [cont2, atribua2] = useState(57)
@@ -8,8 +9,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>OPA</Text>
+      <BotaoGeraInverte/>
     </View>
   );
 }
@@ -17,7 +18,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#bdbdbdff',
     alignItems: 'center',
     justifyContent: 'center',
   },
