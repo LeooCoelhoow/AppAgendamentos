@@ -6,8 +6,8 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 1734314098Leo#
-      POSTGRES_DB: DB_APP
+      POSTGRES_DB: TESTE_LOGIN_DB
     ports:
-      - "5432:5432"
+      - "5433:5433"
     volumes:
       - ./postgres_data:/var/lib/postgresql/data
