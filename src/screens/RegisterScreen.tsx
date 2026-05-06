@@ -13,7 +13,7 @@ import React, { useState, useRef } from 'react';
 import {
   View, Text, TouchableOpacity, StyleSheet,
   KeyboardAvoidingView, Platform, ScrollView,
-  Animated, ActivityIndicator, Alert,
+  Animated, ActivityIndicator, Alert, Image
 } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Colors } from '../theme/colors';
@@ -89,7 +89,10 @@ export default function RegisterScreen({ navigation }: RegisterScreenProps) {
       >
         {/* Logo decorativo */}
         <View style={styles.logoContainer}>
-          <Text style={styles.logoEmoji}>🌸</Text>
+          <Image
+          source={require('../assets/Logo_atualizada-removebg-preview.png')}
+          style={styles.imagemLogo}
+          />
           <Text style={styles.logoTitle}>Criar Conta</Text>
           <Text style={styles.logoSubtitle}>Cadastre-se para agendar seus serviços</Text>
         </View>
@@ -146,6 +149,10 @@ const styles = StyleSheet.create({
   scrollContent: { flexGrow: 1, justifyContent: 'center', paddingHorizontal: 24, paddingVertical: 40 },
   logoContainer: { alignItems: 'center', marginBottom: 28 },
   logoEmoji: { fontSize: 48, marginBottom: 8 },
+  imagemLogo: {
+    width: 140,
+    height: 140,
+  },
   logoTitle: { fontSize: 26, fontWeight: '700', color: Colors.primary, marginBottom: 4 },
   logoSubtitle: { fontSize: 14, color: Colors.textSecondary },
   card: {
