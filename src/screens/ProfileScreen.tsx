@@ -17,7 +17,7 @@
  */
 
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Alert, Platform } from 'react-native';
 import { Colors } from '../theme/colors';
 import { useAppointments } from '../context/AppointmentsContext';
 import { useAuth } from '../context/AuthContext';
@@ -81,20 +81,27 @@ export default function ProfileScreen() {
    * Exibe confirmação antes de fazer logout
    */
   const handleLogout = () => {
-    Alert.alert(
-      'Sair da conta',
-      'Tem certeza que deseja sair?',
-      [
-        { text: 'Cancelar', style: 'cancel' },
-        {
-          text: 'Sair',
-          style: 'destructive',
-          onPress: async () => {
-            await logout();
+    if (Platform.OS === 'web') {
+      const confirm = window.confirm('Tem certeza que deseja sair?');
+      if (confirm) {
+        logout();
+      }
+    } else {
+      Alert.alert(
+        'Sair da conta',
+        'Tem certeza que deseja sair?',
+        [
+          { text: 'Cancelar', style: 'cancel' },
+          {
+            text: 'Sair',
+            style: 'destructive',
+            onPress: async () => {
+              await logout();
+            },
           },
-        },
-      ]
-    );
+        ]
+      );
+    }
   };
 
   return (

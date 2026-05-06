@@ -1,10 +1,8 @@
-## Seria interessante trazer a dependência do day.js para o projeto
-## Criar um sistema que renderize apenas os horários disponíveis
-## Criar um efeito ao confirmar o agendamento
+## Caso não tenha login leve automáticamente para a tela de cadastro
 ## Criar um botão para remover agendamentos
-## Adicionar a logo da Lorena Dallabrida Designer
-## Criar um banco de dados
-## Criar um sistema de login
+## Criar um efeito ao confirmar o agendamento
+## Criar um sistema que renderize apenas os horários disponíveis
+## Adicionar a logo da Lorena Dallabrida Designer na aba de cadastro
 ## Utilizar o Stripe para pagamentos
 ## Criar a página para editar perfil
 ## Criar um sistema de notificação e lembretes
